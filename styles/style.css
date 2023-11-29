@@ -17,7 +17,90 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-style: var(--main-font), sans-serif;
+  max-inline-size: var(--width);
+  margin: auto;
+  font-family: var(--main-font), Arial, sans-serif;
   font-variation-settings: 'wght' var(--main-font-weight);
   background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-block-start: 102px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--main-color);
+}
+
+.header {
+  border: 2px solid var(--main-color);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  inline-size: 100%;
+  padding: 136px 0 25px;
+  align-items: center;
+}
+
+.header__logo {
+  margin-block-end: 20px;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: var(--logo-font-size);
+  line-height: normal;
+}
+
+.header__title {
+  margin-block-end: 25px;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: var(--heading-font-size);
+  line-height: normal;
+}
+
+.header__theme-menu {
+  margin: 0 auto;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.theme-menu__item {
+font-size: 0;
+position: relative;
+inset-inline-start: 9px;
+}
+
+.theme-menu__button {
+  text-transform: uppercase;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  block-size: 14px;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  inset-inline-start: -20px;
+  inline-size: 14px;
+  block-size: 14px;
+  position: absolute;
+}
+
+.content {
+  width: 100%;
+  padding-block-start: 104px;
+}
+
+@media (width <= 375px) {
+  .header {
+    padding: 120px 0 25px;
+  }
 }

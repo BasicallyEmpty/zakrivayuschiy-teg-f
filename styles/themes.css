@@ -10,6 +10,7 @@
   --title-font-weight: 700;
   --background-color: #fff;
   --main-color: #000;
+  --background-image: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7, #e7e7e7 0.01%, #1a1a1a);
 }
 
 :root.theme-dark {
@@ -17,6 +18,7 @@
   --title-font-weight: 875;
   --background-color: #000;
   --main-color: #00CC14;
+  --background-image: repeating-linear-gradient(to right, #000, #000 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000, #000 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,5 +27,6 @@
     --title-font-weight: 875;
     --background-color: #000;
     --main-color: #00CC14;
+    --background-image: repeating-linear-gradient(to right, #000, #000 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000, #000 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
   }
 }
