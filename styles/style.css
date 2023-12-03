@@ -197,8 +197,20 @@
   font-size: 14px;
   inset-inline-end: 25px;
   inset-block-start: 25px;
-  -webkit-text-stroke: 1px var(--background-color);
+  text-shadow:
+  -1px 0 var(--background-color), 
+  0 1px var(--background-color), 
+  1px 0 var(--background-color), 
+  0 -1px var(--background-color);
   mix-blend-mode: hard-light;
+}
+
+@supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+  .card__overlay {
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
+  }
 }
 
 .card__image-container {
@@ -395,6 +407,11 @@
 @media (width <= 375px) {
   .header {
     padding: 120px 0 25px;
+  }
+
+  .card__overlay {
+    inset-inline-end: 11px;
+    inset-block-start: 23px;
   }
 
   .footer__button {
