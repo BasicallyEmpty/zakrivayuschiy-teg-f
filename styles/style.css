@@ -29,7 +29,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  max-inline-size: var(--width);
+  max-inline-size: 700px;
   font-variation-settings: 'wght' var(--main-font-weight);
 }
 
