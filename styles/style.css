@@ -222,23 +222,23 @@
 }
 
 .card__button-container {
-  align-self: flex-end;
   display: flex;
   align-items: center;
   gap: 6px;
+  align-self: flex-end;
 }
 
 .card__icon-button {
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  inline-size: 38px;
-  block-size: 38px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  outline-offset: -2px;
   display: flex;
   align-items: center;
+  border: none;
+  padding: 0;
+  outline-offset: -2px;
+  background-color: transparent;
+  transition: 0.3s ease;
+  cursor: pointer;
+  inline-size: 38px;
+  block-size: 38px;
 }
 
 .card__icon-button:focus {
@@ -255,8 +255,8 @@
 }
 
 .like-icon.is-liked .heart {
-  animation: like 0.3s 0.1s ease-in alternate;
   transform-origin: center;
+  animation: like 0.3s 0.1s ease-in alternate;
 }
 
 .core {
