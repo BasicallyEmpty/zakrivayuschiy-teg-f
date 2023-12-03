@@ -195,21 +195,21 @@
   opacity: 0.5;
   font-family: var(--accent-font);
   font-size: 14px;
+  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
+    1px 0 var(--background-color), 0 -1px var(--background-color);
   inset-inline-end: 25px;
   inset-block-start: 25px;
-  text-shadow:
-  -1px 0 var(--background-color), 
-  0 1px var(--background-color), 
-  1px 0 var(--background-color), 
-  0 -1px var(--background-color);
   mix-blend-mode: hard-light;
 }
 
-@supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(--background-color))
+) {
   .card__overlay {
+    text-shadow: none;
     -webkit-text-stroke: 1px var(--background-color);
     text-stroke: 1px var(--background-color);
-    text-shadow: none;
   }
 }
 
