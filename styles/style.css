@@ -465,12 +465,13 @@
   }
 
   .dialog[open] {
-    max-width: clamp(320px, 100%, 341px);
+    max-inline-size: clamp(320px, 100%, 341px);
     min-height: 195px;
     padding: 30px 40px;
   }
 
   .dialog__button {
-    inline-size: 257px;
+    inline-size: clamp(230px, 100%, 257px);
+    display: flex;
   }
 }
