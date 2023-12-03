@@ -189,10 +189,14 @@
 
 .card__container {
   position: relative;
+  inline-size: 100%;
+  outline: 2px solid var(--main-color);
+  font-size: 0;
 }
 
 .card__overlay {
   position: absolute;
+  z-index: 1;
   opacity: 0.5;
   font-family: var(--accent-font);
   font-size: 14px;
@@ -201,7 +205,7 @@
   inset-inline-end: 25px;
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
-  z-index: 1;
+  overflow: hidden;
 }
 
 @supports (
@@ -215,15 +219,9 @@
   }
 }
 
-.card__image-container {
-  font-size: 0;
-  inline-size: 100%;
-}
-
 .card__image {
   object-fit: cover;
   object-position: right;
-  outline: 2px solid var(--main-color);
   inline-size: 100%;
   aspect-ratio: 1 / 1;
   clip-path: inset(0);
@@ -366,9 +364,9 @@
 .dialog[open] {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
   align-self: center;
-  align-items: center;
   max-width: 357px;
   min-height: 193px;
   margin: auto;
@@ -423,7 +421,7 @@
 }
 
 .invert {
-  filter: invert(60%);;
+  filter: invert(60%);
 }
 
 .hue-rotate {
@@ -465,13 +463,15 @@
   }
 
   .dialog[open] {
-    max-inline-size: clamp(320px, 100%, 341px);
     min-height: 195px;
     padding: 30px 40px;
+    min-inline-size: 320px;
+    inline-size: 100%;
+    max-inline-size: 341px;
   }
 
   .dialog__button {
-    inline-size: clamp(230px, 100%, 257px);
     display: flex;
+    inline-size: clamp(230px, 100%, 257px);
   }
 }
