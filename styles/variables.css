@@ -36,6 +36,6 @@
 
 @media (width <= 375px) {
   :root {
-    --logo-font-size: clamp(2.8125rem, 1.358rem + 7.2727vw, 3.0625rem);
+    --logo-font-size: clamp(2.625rem, 0.0795rem + 12.7273vw, 3.0625rem);;
   }
 }
