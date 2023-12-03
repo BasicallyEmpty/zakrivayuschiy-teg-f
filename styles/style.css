@@ -136,7 +136,7 @@
 .theme-menu__button::after {
   content: '';
   display: block;
-  height: 2px;
+  block-size: 2px;
   background-color: var(--main-color);
   transition: 0.3s ease;
   transform: scale(0);
@@ -361,8 +361,9 @@
   align-items: center;
   gap: 30px;
   align-self: center;
-  max-width: 357px;
-  min-height: 193px;
+  inline-size: var(--width);
+  max-inline-size: 357px;
+  min-block-size: 193px;
   margin: auto;
   border: 2px solid var(--main-color);
   padding: 30px;
@@ -457,10 +458,8 @@
   }
 
   .dialog[open] {
-    min-height: 195px;
+    min-block-size: 195px;
     padding: 30px 40px;
-    min-inline-size: 320px;
-    inline-size: 100%;
     max-inline-size: 341px;
   }
 

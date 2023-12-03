@@ -31,7 +31,7 @@
   --button-fill-color: var(--background-color);
   --contour-color: var(--main-color);
   --icon-fill-color: #ff0000;
-  --width: clamp(320px, 100%, 700px);
+  --width: clamp(310px, 100%, 700px);
 }
 
 @media (width <= 375px) {
