@@ -368,6 +368,7 @@
   flex-direction: column;
   gap: 30px;
   align-self: center;
+  align-items: center;
   max-width: 357px;
   min-height: 193px;
   margin: auto;
@@ -461,5 +462,15 @@
   .floppy {
     inline-size: 28px;
     block-size: 28px;
+  }
+
+  .dialog[open] {
+    max-width: clamp(320px, 100%, 341px);
+    min-height: 195px;
+    padding: 30px 40px;
+  }
+
+  .dialog__button {
+    inline-size: 257px;
   }
 }
