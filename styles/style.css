@@ -61,8 +61,8 @@
   content: '';
   position: absolute;
   display: block;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   background-color: var(--button-fill-color);
   transition: 0.5s ease-in-out;
   transform: scaleX(0);
@@ -81,7 +81,7 @@
   border: 2px solid var(--main-color);
   padding: 136px 0 25px;
   background-color: var(--background-color);
-  inline-size: 100%;
+  inline-size: var(--width);
 }
 
 .header__logo {
@@ -103,7 +103,8 @@
 }
 
 .header__theme-menu {
-  margin: 0 auto;
+  inset-inline-start: 9px;
+  position: relative;
 }
 
 .theme-menu__list {
@@ -113,9 +114,7 @@
 }
 
 .theme-menu__item {
-  position: relative;
   font-size: 0;
-  inset-inline-start: 9px;
 }
 
 .theme-menu__button {
@@ -171,14 +170,26 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-block-start: 100px;
-  inline-size: 100%;
+  padding: 100px 0 105px;
+  max-inline-size: var(--width);
+}
+
+.content__save-button {
+  gap: 8px;
+  inline-size: 339px;
+  block-size: 55px;
+  align-self: center;
+}
+
+.content__button-image-container {
+  inline-size: 21px;
+  block-size: 21px;
 }
 
 .card {
   border: 2px solid var(--main-color);
   background-color: var(--background-color);
-  inline-size: 100%;
+  max-inline-size: 100%;
 }
 
 .card__title {
@@ -189,7 +200,7 @@
 
 .card__container {
   position: relative;
-  inline-size: 100%;
+  max-inline-size: 100%;
   outline: 2px solid var(--main-color);
   font-size: 0;
 }
@@ -232,6 +243,7 @@
   flex-direction: column;
   gap: 25px;
   padding: 25px;
+  max-inline-size: 100%;
 }
 
 .card__button-container {
@@ -337,24 +349,6 @@
   block-size: 38px;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  padding: 50px 0 105px;
-  inline-size: 100%;
-}
-
-.footer__button {
-  gap: 8px;
-  inline-size: 339px;
-  block-size: 55px;
-}
-
-.footer__image-container {
-  inline-size: 21px;
-  block-size: 21px;
-}
-
 .floppy {
   color: var(--main-color);
   inline-size: 21px;
@@ -446,13 +440,13 @@
     inset-block-start: 23px;
   }
 
-  .footer__button {
+  .content__save-button {
     flex-direction: column;
     inline-size: 310px;
     block-size: 84px;
   }
 
-  .footer__image-container {
+  .content__button-image-container {
     inline-size: 28px;
     block-size: 28px;
   }
